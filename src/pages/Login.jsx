@@ -2,6 +2,14 @@ import axios from "axios";
 import React, { useState } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"; // Add this import
+
+<p className="text-center mt-6 text-sm text-gray-700">
+  Don’t have an account?{" "}
+  <Link to="/register" className="text-blue-500 hover:underline">
+    Register
+  </Link>
+</p>
 import { toast } from "react-toastify";
 import { useAuth } from "../context/UserContext";
 
@@ -97,9 +105,12 @@ const Login = () => {
 
         <p className="text-center mt-6 text-sm text-gray-700">
           Don’t have an account?{" "}
-          <a href="/register" className="text-blue-500 hover:underline">
+          {/* <a href="/register" className="text-blue-500 hover:underline">
             Register
-          </a>
+          </a> */}
+           <Link to="/register" className="text-blue-500 hover:underline">
+    Register
+  </Link>
         </p>
       </div>
     </div>
